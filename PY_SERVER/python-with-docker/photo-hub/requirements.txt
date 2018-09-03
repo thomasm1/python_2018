@@ -1,0 +1,3 @@
+gunicorn
+json-logging-py
+falcon

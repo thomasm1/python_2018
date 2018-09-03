@@ -1,0 +1,176 @@
+1
+00:00:00,272 --> 00:00:05,320
+Something that Nick Felton talked about at the last Eyeo Festival,
+
+2
+00:00:05,320 --> 00:00:08,870
+with his new annual report that just came out.
+
+3
+00:00:08,870 --> 00:00:11,780
+He collected so much data, for this project.
+
+4
+00:00:11,780 --> 00:00:14,973
+In, in the past he's collected the data in manual form on paper and
+
+5
+00:00:14,973 --> 00:00:18,010
+then he developed an app so that he could record stuff himself.
+
+6
+00:00:19,070 --> 00:00:22,730
+For this year he collected data from like all kinds of news sources.
+
+7
+00:00:22,730 --> 00:00:24,550
+So it was like all his emails,
+
+8
+00:00:24,550 --> 00:00:28,770
+all of his text messages all of his phone records, plus a bunch of stuff that he
+
+9
+00:00:28,770 --> 00:00:31,935
+was collecting manually, plus all of his geographic locations.
+
+10
+00:00:31,935 --> 00:00:35,890
+So for the phones we're doing a lot of this tracking for him, and
+
+11
+00:00:35,890 --> 00:00:41,800
+what I think was really interesting about that project is that the number of
+
+12
+00:00:41,800 --> 00:00:44,800
+data sources were or number of values were so
+
+13
+00:00:44,800 --> 00:00:50,020
+big that he could no longer manage it in the manual form.
+
+14
+00:00:50,020 --> 00:00:55,700
+Like, he used to do this project with Excel sheets, and to
+
+15
+00:00:55,700 --> 00:00:58,700
+me that's when that project became like a big data project,
+
+16
+00:00:58,700 --> 00:01:03,610
+because he had to relinquish some control to the algorithm or to the software.
+
+17
+00:01:03,610 --> 00:01:07,040
+We said, okay, well make me a map of all the places that I've been and
+
+18
+00:01:07,040 --> 00:01:10,400
+he could make this, like he could let the software make this map.
+
+19
+00:01:10,400 --> 00:01:16,040
+And, then as a human being who had, who lived through this he could look
+
+20
+00:01:16,040 --> 00:01:18,710
+at the map and say, well I know that's not right because I never went there.
+
+21
+00:01:18,710 --> 00:01:20,290
+So this was a glitch in the GPS or
+
+22
+00:01:20,290 --> 00:01:24,160
+this was, you know, this was a glitch in my email system or something.
+
+23
+00:01:24,160 --> 00:01:28,310
+But I think it's really interesting that he's made the decision to leave those
+
+24
+00:01:28,310 --> 00:01:29,120
+glitches in there.
+
+25
+00:01:29,120 --> 00:01:33,690
+Like, the things that I am calling glitches are really just kind of
+
+26
+00:01:33,690 --> 00:01:35,855
+side effects of the data tracking process.
+
+27
+00:01:35,855 --> 00:01:39,280
+>> Mm-hm. >> And side effects of the algorithm, and how it's being applied.
+
+28
+00:01:39,280 --> 00:01:41,600
+So I think, connecting that to the question.
+
+29
+00:01:41,600 --> 00:01:42,940
+What's interesting about that to me is,
+
+30
+00:01:42,940 --> 00:01:45,990
+when you're talking about what's subjective and what's objective.
+
+31
+00:01:47,820 --> 00:01:50,500
+It gets really fuzzy when you get the algorithm involved, right?
+
+32
+00:01:50,500 --> 00:01:53,270
+because you have. You have sort of my point of view.
+
+33
+00:01:53,270 --> 00:01:55,920
+You have maybe like a more balanced objective point of view.
+
+34
+00:01:55,920 --> 00:01:59,480
+But then you also have the point of view that's being represented by
+
+35
+00:01:59,480 --> 00:02:00,314
+your code or by the tools that you're using.
+
+36
+00:02:00,314 --> 00:02:01,912
+[CROSSTALK]. >> Yeah the data itself right?
+
+37
+00:02:01,912 --> 00:02:02,649
+And how it's collected.
+
+38
+00:02:02,649 --> 00:02:03,557
+>> Yeah the data itself.
+
+39
+00:02:03,557 --> 00:02:06,030
+The process that we use, use to collect it.
+
+40
+00:02:06,030 --> 00:02:12,074
+The technology that was maybe reliable or not that was used and collected.
+
+41
+00:02:12,074 --> 00:02:13,120
+So, yeah I don't know.
+
+42
+00:02:13,120 --> 00:02:16,440
+So I don't know what, what is like an objective truth in that, you know,
+
+43
+00:02:16,440 --> 00:02:17,410
+in that kind of project.
+
+44
+00:02:19,060 --> 00:02:20,690
+Yeah but it's, it's really interesting.
+

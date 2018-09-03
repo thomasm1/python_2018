@@ -1,0 +1,56 @@
+@import (reference, less) '~materialize-css/dist/css/materialize.min.css';
+@import '~variables';
+
+:local(.Table) {
+  margin: 0;
+
+  table {
+    &:extend(table all);
+    background: transparent;
+    border-collapse: collapse;
+    border-spacing: 27px 0px;
+    table-layout: fixed;
+    white-space: nowrap;
+    width: 100%;
+  }
+  th, td {
+    padding: 15px 0;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:first-child {
+      padding-left: 27px;
+    }
+    &:last-child {
+      padding-right: 27px;
+    }
+  }
+
+  th {
+    color: #A7A7A7;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 0.8rem;
+  }
+  thead {
+    border: none;
+  }
+  tbody {
+    &:extend(.z-depth-1);
+    background: white;
+    font-size: 14px;
+  }
+  tbody tr {
+    transition-duration: 0.2s;
+    background: transparent;
+    cursor: pointer;
+    outline: 0.5px solid rgba(200,200,200,0.1);
+    height: 75px;
+    border: #979797;
+    color: #4C5159;
+    &:hover {
+      &:extend(.z-depth-1);
+    }
+  }
+}

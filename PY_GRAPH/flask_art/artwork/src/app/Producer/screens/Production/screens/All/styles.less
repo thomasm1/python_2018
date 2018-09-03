@@ -1,0 +1,27 @@
+@import (less, reference) '~materialize-css/dist/css/materialize.min.css';
+
+:local(.Production) {
+  .summary {
+    padding-top: 40px;
+  }
+
+  nav {
+    background-color: inherit;
+    height: 39px;
+    margin: 26px 0;
+    width: 240px;
+
+    #search {
+      padding-left: 10px;
+    }
+
+    .input-field input[type=search] ~ .material-icons {
+      color: #616975;
+      top: -11px;
+      right: .5rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+

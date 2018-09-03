@@ -1,0 +1,44 @@
+1
+00:00:00,200 --> 00:00:05,820
+To get the sum of the attendances, we'll be using the d3 sum method, which takes
+
+2
+00:00:05,820 --> 00:00:11,800
+both some array or less like object, in our case leaves, and an accessor
+
+3
+00:00:11,800 --> 00:00:17,270
+function that defines what to actually sum, in our case the attendance.
+
+4
+00:00:17,270 --> 00:00:20,060
+Hopefully, you're starting to see a pattern here and even for
+
+5
+00:00:20,060 --> 00:00:22,370
+something like a sum.
+
+6
+00:00:22,370 --> 00:00:25,440
+D3 defines it over some collection of data.
+
+7
+00:00:25,440 --> 00:00:29,090
+In this case, leaves with some accessor function
+
+8
+00:00:29,090 --> 00:00:30,860
+to customize the behavior of it.
+
+9
+00:00:30,860 --> 00:00:36,600
+In this case, every element of leaves gets passed to the accessor callback as d.
+
+10
+00:00:36,600 --> 00:00:41,070
+And whatever we return from the successor callback, d3 adds up and
+
+11
+00:00:41,070 --> 00:00:41,970
+returns from the sum.
+

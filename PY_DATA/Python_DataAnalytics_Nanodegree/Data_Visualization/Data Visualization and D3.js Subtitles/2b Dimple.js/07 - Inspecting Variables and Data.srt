@@ -1,0 +1,180 @@
+1
+00:00:00,390 --> 00:00:02,770
+Well for the debugger to actually catch,
+
+2
+00:00:02,770 --> 00:00:06,210
+you first have to open up the Chrome JavaScript console.
+
+3
+00:00:06,210 --> 00:00:12,740
+I can do this on a Mac by using Cmd+Option+I or by simply navigating
+
+4
+00:00:12,740 --> 00:00:20,920
+to the toolbar, looking under the Tools menu, and going to JavaScript Console.
+
+5
+00:00:20,920 --> 00:00:25,250
+As you can see here the console's load in the bottom, but
+
+6
+00:00:25,250 --> 00:00:29,730
+since our page is already loaded there's no debugger to catch.
+
+7
+00:00:29,730 --> 00:00:32,920
+Let us try to refresh the page and see if the debugger will catch.
+
+8
+00:00:34,090 --> 00:00:39,510
+As you can see here in our code the debugger stopped execution at line 19.
+
+9
+00:00:39,510 --> 00:00:44,330
+To actually play around with the execution context of our draw function and
+
+10
+00:00:44,330 --> 00:00:46,380
+inspect what our data is, and
+
+11
+00:00:46,380 --> 00:00:51,820
+what variables are in scope, let's navigate to the console tab of the debugger.
+
+12
+00:00:53,230 --> 00:00:55,550
+Inspecting some of the variables just for
+
+13
+00:00:55,550 --> 00:01:01,660
+a sanity check, we can print out data and see that we have 836 data points.
+
+14
+00:01:01,660 --> 00:01:06,500
+Opening up this array, we can inspect what each object looks like.
+
+15
+00:01:06,500 --> 00:01:10,990
+In this case we see attendance, date, goals, and so forth.
+
+16
+00:01:10,990 --> 00:01:14,990
+So every property of this object represents one of the columns of our data set.
+
+17
+00:01:14,990 --> 00:01:20,980
+But this might be hard to see if we want to inspect our entire dataset,
+
+18
+00:01:20,980 --> 00:01:25,140
+since we have to open up every one of these objects individually.
+
+19
+00:01:25,140 --> 00:01:28,470
+A little trick of the Chrome debugger is it has
+
+20
+00:01:28,470 --> 00:01:33,580
+a utility function called .cable that we can call like we can call console.log.
+
+21
+00:01:33,580 --> 00:01:36,890
+This is very similar to console.log.
+
+22
+00:01:36,890 --> 00:01:41,060
+But rather than just printing the naive string representation of a variable,
+
+23
+00:01:41,060 --> 00:01:45,990
+if the variable is in some collection, be it an array, JSON, or
+
+24
+00:01:45,990 --> 00:01:49,090
+what have you, the table function instead prints out
+
+25
+00:01:49,090 --> 00:01:52,580
+a nicely formatted spreadsheet in the console window.
+
+26
+00:01:52,580 --> 00:01:57,240
+Let's go ahead and call console.table on our data array.
+
+27
+00:01:57,240 --> 00:02:02,165
+This takes a second since we have so many data points, but if you can see here,
+
+28
+00:02:02,165 --> 00:02:08,070
+council.table has printed out all of our data in a nice tabular format.
+
+29
+00:02:08,070 --> 00:02:10,350
+It's easy to scroll and inspect.
+
+30
+00:02:10,350 --> 00:02:14,580
+Scrolling to the top of this, you can what the field names are.
+
+31
+00:02:14,580 --> 00:02:21,460
+In this case, attendance, goals, penalty kicks, referee, stadium, and so forth.
+
+32
+00:02:22,560 --> 00:02:27,540
+And we can also see here that we have the year, the time, and the date.
+
+33
+00:02:27,540 --> 00:02:31,560
+You might want to be careful with the console.table function.
+
+34
+00:02:31,560 --> 00:02:34,240
+As you noticed, it took a second to load.
+
+35
+00:02:34,240 --> 00:02:36,020
+This can get quite unwieldy and
+
+36
+00:02:36,020 --> 00:02:40,290
+potentially crash your browser if you try it with a large data file.
+
+37
+00:02:40,290 --> 00:02:45,710
+As you can see, the structure is similar to what we mentioned in the quiz, and
+
+38
+00:02:45,710 --> 00:02:48,340
+all the columns should be identical.
+
+39
+00:02:48,340 --> 00:02:54,060
+The variables of interest here are the year column and the attendance column.
+
+40
+00:02:55,330 --> 00:03:00,050
+How might we best represent attendance as a function of year?
+
+41
+00:03:00,050 --> 00:03:02,800
+Remember what we mentioned when choosing a chart type.
+
+42
+00:03:02,800 --> 00:03:07,090
+We need to think about our data types of our variables in the abstract sense.
+
+43
+00:03:07,090 --> 00:03:09,640
+I don't mean what JavaScript type they are.
+
+44
+00:03:09,640 --> 00:03:12,360
+And also we want to think about what type of
+
+45
+00:03:12,360 --> 00:03:15,800
+relation between attendance in the year we want to convey.
+

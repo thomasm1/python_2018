@@ -1,0 +1,17 @@
+0:00:00.300,0:00:03.200
+We hope this orientation has helped[br]answer a lot of the questions you had
+
+0:00:03.200,0:00:04.980
+about the Nanodegree program.
+
+0:00:04.980,0:00:08.210
+To make sure you have all of the[br]detailed info you need, please read your
+
+0:00:08.210,0:00:11.670
+Nanodegree student handbook, which is[br]linked in the instructor notes here.
+
+0:00:11.670,0:00:14.540
+If you don't see it, the answer to any[br]questions you have after reading through
+
+0:00:14.540,0:00:17.740
+all of that, feel free to search in[br]your forum or ask your question there.

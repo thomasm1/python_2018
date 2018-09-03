@@ -1,0 +1,64 @@
+1
+00:00:00,320 --> 00:00:02,450
+One thing that might have made you uneasy,
+
+2
+00:00:02,450 --> 00:00:07,090
+is that when we selected our header element, we simply chose a class name and
+
+3
+00:00:07,090 --> 00:00:09,910
+assumed it to be unique, or hoped it was.
+
+4
+00:00:09,910 --> 00:00:13,870
+Typically, you cannot make the assumption that a class name is unique
+
+5
+00:00:13,870 --> 00:00:15,380
+to a given element.
+
+6
+00:00:15,380 --> 00:00:19,520
+IDs are typically reserved as unique identifiers that don't show up
+
+7
+00:00:19,520 --> 00:00:23,340
+on any other HTML or DOM nodes throughout the page.
+
+8
+00:00:23,340 --> 00:00:28,890
+But classes could, and often are, applied to many different HTML tags.
+
+9
+00:00:28,890 --> 00:00:32,040
+We can test whether navbar static top
+
+10
+00:00:32,040 --> 00:00:36,070
+was indeed unique by using d3's selectAll function.
+
+11
+00:00:36,070 --> 00:00:39,310
+SelectAll works in just the same way as select.
+
+12
+00:00:39,310 --> 00:00:41,120
+Except for instead of returning one,
+
+13
+00:00:41,120 --> 00:00:44,560
+it returns all the elements that match the selection.
+
+14
+00:00:44,560 --> 00:00:45,920
+As you can see here,
+
+15
+00:00:45,920 --> 00:00:52,470
+I'm trying to select every header with class navbarstatic top on the page.
+
+16
+00:00:52,470 --> 00:00:55,720
+Luckily for us, what gets returned is a single element.
+

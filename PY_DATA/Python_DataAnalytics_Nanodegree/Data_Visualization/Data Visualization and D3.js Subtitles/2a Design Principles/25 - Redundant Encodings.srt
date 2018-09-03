@@ -1,0 +1,68 @@
+1
+00:00:00,500 --> 00:00:03,800
+Overall, I would say that these colors distract from the data.
+
+2
+00:00:04,920 --> 00:00:09,150
+The colors shown don't appear to be chosen for any particular reason.
+
+3
+00:00:09,150 --> 00:00:13,510
+In fact, they're actually the default rainbow colors for the ggplot2 package for
+
+4
+00:00:13,510 --> 00:00:14,721
+the R programming language.
+
+5
+00:00:16,000 --> 00:00:20,590
+These colors are also quite bright, which strains the eyes, and above all,
+
+6
+00:00:20,590 --> 00:00:24,550
+each color doesn't actually convey any additional information about the data.
+
+7
+00:00:25,700 --> 00:00:28,490
+The labels on the left side of the bar plot are enough to
+
+8
+00:00:28,490 --> 00:00:31,700
+indicate which bar belongs to which type of diamond cut.
+
+9
+00:00:32,960 --> 00:00:36,900
+This actually makes the use of color redundant since both the labels and
+
+10
+00:00:36,900 --> 00:00:39,490
+the color are indicating the cut type.
+
+11
+00:00:39,490 --> 00:00:43,310
+You also might have thought that the legend at the right here is unnecessary.
+
+12
+00:00:44,320 --> 00:00:47,650
+We could simply design this visualization with the labels at the left in
+
+13
+00:00:47,650 --> 00:00:49,930
+the graph, decreasing the time for
+
+14
+00:00:49,930 --> 00:00:54,220
+the reader's eye to bounce between the legend and the main data display.
+
+15
+00:00:54,220 --> 00:00:57,060
+Now, I know this is a small display, but this makes sense for
+
+16
+00:00:57,060 --> 00:01:00,960
+larger visualizations where the eye would be scanning across an entire page.
+
+17
+00:01:00,960 --> 00:01:03,370
+So, when it comes to color, what should you do?
+
