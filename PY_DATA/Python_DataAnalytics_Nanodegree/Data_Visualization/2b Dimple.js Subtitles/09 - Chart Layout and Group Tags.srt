@@ -1,0 +1,88 @@
+1
+00:00:00,710 --> 00:00:05,470
+As you can see, Dimple.js's API is much closer to
+
+2
+00:00:05,470 --> 00:00:09,060
+what the grammar of graphics specifies than d3 itself.
+
+3
+00:00:09,060 --> 00:00:14,370
+This is because Dimple.js exists at a higher level of abstraction than d3,
+
+4
+00:00:14,370 --> 00:00:17,850
+and since the grammar of graphics is at a little bit of
+
+5
+00:00:17,850 --> 00:00:20,490
+a higher level of abstraction as well.
+
+6
+00:00:20,490 --> 00:00:25,510
+Dimple happens to fit nicely with the grammar of graphics specification.
+
+7
+00:00:25,510 --> 00:00:29,520
+The first few lines of code here are simply standard JavaScript,
+
+8
+00:00:29,520 --> 00:00:34,500
+which set up the variables for the width, height, and margins of the chart.
+
+9
+00:00:34,500 --> 00:00:39,410
+As well as the d3 code, which append an SVG element on our page.
+
+10
+00:00:39,410 --> 00:00:43,640
+The declaration here to use strict lets the browser know that you
+
+11
+00:00:43,640 --> 00:00:47,740
+want to enforce a restricted subset of JavaScript within this function.
+
+12
+00:00:47,740 --> 00:00:52,390
+The most important feature of strict mode is that it forces the browser
+
+13
+00:00:52,390 --> 00:00:56,870
+to throw explicit errors anytime JavaScript might silently fail.
+
+14
+00:00:56,870 --> 00:01:00,840
+Similar to what we saw in the first lesson for HTML elements.
+
+15
+00:01:00,840 --> 00:01:05,330
+These lines of code simply tell the browser to find the body tag,
+
+16
+00:01:05,330 --> 00:01:09,620
+append a new SVG element, add appropriate attributes for
+
+17
+00:01:09,620 --> 00:01:15,060
+the width and the height and then add a group with class chart.
+
+18
+00:01:15,060 --> 00:01:16,950
+We haven't seen a group yet.
+
+19
+00:01:16,950 --> 00:01:22,010
+But all the group does is, groups the SVG and everything within it,
+
+20
+00:01:22,010 --> 00:01:23,490
+into a single element.
+
+21
+00:01:23,490 --> 00:01:26,720
+Think of this is as the same way as webpages often use div
+
+22
+00:01:26,720 --> 00:01:31,390
+tags to group common elements together, such as, paragraphs or side bars.
+

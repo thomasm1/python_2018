@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/visitly/
+hooks:
+  BeforeInstall:
+    - location: /scripts/removeoldfiles.sh
+  AfterInstall:
+    - location: /scripts/startwebserver.sh

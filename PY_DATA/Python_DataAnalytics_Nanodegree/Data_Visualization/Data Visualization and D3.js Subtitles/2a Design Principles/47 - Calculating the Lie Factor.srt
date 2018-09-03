@@ -1,0 +1,4 @@
+1
+00:00:00,006 --> 00:00:04,280
+Using 53% and 780%, calculate the lie factor for this graphic.
+

@@ -1,0 +1,80 @@
+1
+00:00:00,340 --> 00:00:05,140
+And to map the date and the attendance from their initial data values
+
+2
+00:00:05,140 --> 00:00:10,270
+to an actual pixel value, we use D3's scale function.
+
+3
+00:00:10,270 --> 00:00:14,450
+One thing that we haven't seen before is how to deal with time in D3.
+
+4
+00:00:14,450 --> 00:00:20,200
+Notice, rather than just using d3.scale, we're first going into
+
+5
+00:00:20,200 --> 00:00:24,530
+the d3.time module, and then calling the scale function contained within.
+
+6
+00:00:24,530 --> 00:00:29,120
+For our attendance, or our count scale, since attendance is an integer,
+
+7
+00:00:29,120 --> 00:00:34,550
+we can directly use d3.scale and then use a linear function within.
+
+8
+00:00:34,550 --> 00:00:39,080
+And for both the time scale and the count scale, the domain we're
+
+9
+00:00:39,080 --> 00:00:44,330
+mapping from is the minimum and maximum dates, in this case the time extent for
+
+10
+00:00:44,330 --> 00:00:47,570
+the attendance, it's the minimum and maximum attendance.
+
+11
+00:00:47,570 --> 00:00:51,720
+In this case, count_extent, which get mapped into the range for
+
+12
+00:00:51,720 --> 00:00:54,670
+the x axis, the margin to the width.
+
+13
+00:00:54,670 --> 00:00:57,840
+So basically, the left-most part of our chart and
+
+14
+00:00:57,840 --> 00:00:59,640
+the right-most part of our chart.
+
+15
+00:00:59,640 --> 00:01:05,330
+And for the y axis, the quirk of SVG where it has an inverted coordinate plane,
+
+16
+00:01:05,330 --> 00:01:10,290
+a y value of zero is actually at the top of the webpage.
+
+17
+00:01:10,290 --> 00:01:13,750
+And as the y value increases, you go down the page, so
+
+18
+00:01:13,750 --> 00:01:19,260
+in this case, the minimum value of attendance starts at the height of our chart.
+
+19
+00:01:19,260 --> 00:01:21,170
+So at the very bottom.
+
+20
+00:01:21,170 --> 00:01:25,430
+And it goes up into the top of the chart, in this case, margin.
+

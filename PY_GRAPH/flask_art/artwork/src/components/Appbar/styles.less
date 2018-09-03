@@ -1,0 +1,115 @@
+@import (reference, less) '~materialize-css/dist/css/materialize.min.css';
+:local(.Appbar) {
+  &:extend(nav all);
+  background: #FFFFFF;
+  box-shadow: 1px 0.5px 1px #777;
+  color: #4C5159;
+  font-size: 24px;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 15px;
+  position: fixed;
+  z-index: 9999;
+  &:hover {
+    .tab {
+      &.hover {
+        border-bottom: none;
+        &:hover {
+          border-bottom: 5px solid #4990E2;
+        }
+      }
+
+    }
+  }
+  a, span, p {
+    color: #4C5159 !important;
+  }
+
+  .dropdown-button {
+    border-left: 1px solid #F0F0F0;
+  }
+
+  .dropdown-content.active {
+    display: block !important;
+    top: 50px !important;
+  }
+
+  .brand-logo {
+    border-right: 1px solid #F0F0F0;
+    color: black !important;
+    font-size: 36px;
+    font-weight: 100;
+    height: 100%;
+    padding-right: 50px;
+    position: relative;
+
+    img {
+      height: 63px;
+      padding-right: 15px;
+      width: auto;
+      vertical-align: middle;
+      margin-top: -7px;
+      margin-left: 2px;
+    }
+  }
+
+  .tab {
+    padding: 0 10px;
+    margin: 0 15px;
+    height: 80px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    box-sizing:border-box;
+    &:hover, &.hover {
+      border-bottom: 5px solid #4990E2;
+      cursor: pointer;
+    }
+
+    a {
+      font-size: 1.6rem;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+  #nav-mobile {
+    li {
+      height: 80px;
+      padding: 10px;
+    }
+  }
+  .search {
+    padding-right: 20px;
+    padding-bottom: 6px;
+  }
+  .avatar-wrapper {
+    border-left: 1px solid #EBEDF0;
+    position: relative;
+  }
+  .notification {
+    position: absolute;
+    top: 21px;
+    right: 6px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    background-color: #EE3B3A;
+    font-size: 10px;
+    font-weight: 500;
+    .number {
+      color: white !important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: block;
+    }
+  }
+  .avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-left: 12px;
+  }
+}

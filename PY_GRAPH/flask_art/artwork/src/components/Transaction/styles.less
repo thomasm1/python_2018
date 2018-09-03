@@ -1,0 +1,160 @@
+@import (reference, less) '~materialize-css/dist/css/materialize.min.css';
+
+:local(.TransactionCard) {
+	padding: 20px;
+	width: 100%;
+	display: inline-block;
+	border-top: 1px solid #EBEDF0;
+	border-bottom: 1px solid #EBEDF0;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	.transactionCardHeader {
+		width: 100%;
+		white-space: nowrap;
+	}
+	.transactionId {
+		font-weight: 100;
+		font-size: 24px;
+		overflow: hidden;
+		width: 95%;
+		display: inline-block;
+		line-height: 38px;
+		vertical-align: bottom;
+	}
+	.transactionLink {
+		padding-left: 10px;
+		font-weight: 600;
+		display: inline-block;
+		line-height: 38px;
+		color: #000000;
+	}
+	.transactionBody {
+		display: inline-block;
+		width: 70%;
+		vertical-align: top;
+	}
+	.transactionBalance {
+		display: inline-block;
+		width: 30%;
+	}
+	.balance {
+		font-size: 18px;
+		font-weight: 100;
+		text-align: right;
+	}
+	.balanceValue {
+		text-align: right;
+		font-size: 48px;
+		font-weight: 100;
+		color: #9B9B9B;
+	}
+	.partyA {
+		display: flex;
+	}
+	.partyStepperContainer {
+		display: inline-block;
+		vertical-align: top;
+		width: 75px;
+		position: relative;
+	}
+	.stepperLine {
+		border-left: 1px solid black;
+		width: 10px;
+		height: calc(~"100% - 50px");
+		position: absolute;
+		left: 19px;
+		top: 45px;
+	}
+	.party {
+		width: 38px;
+		height: 38px;
+		border: 1px solid #6C7480;
+		border-radius: 50%;
+		color: #6C7480;
+		position: relative;
+		margin-bottom: 30px;
+		.center {
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			font-size: 24px;
+			font-weight: 600;
+		}
+	}
+	.party[data-value='-1'] {
+		border: 1px solid #FF0000 !important;
+		color: #FF0000 !important;
+	}
+	.party[data-value='1'] {
+		border: 1px solid #417505 !important;
+		color: #417505 !important;
+	}
+	.lineItemContainer {
+		display: inline-block;
+		margin-bottom: 38px;
+	}
+	.name {
+		font-weight: 600;
+		font-size: 24px;
+		color: #000000;
+		width: 200px;
+		display: inline-block;
+	}
+	.action {
+		font-weight: 100;
+		color: #000000;
+		font-size: 24px;
+	}
+	.value {
+		font-weight: 100;
+		color: #000000;
+		font-size: 24px;
+	}
+	.value[data-value='1'] {
+		color: #417505 !important;
+	}
+	.value[data-value='-1'] {
+		color: #D0011B !important;
+	}
+}
+
+:local(.TransactionFilter) {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	:last-child:not(.value) {
+		border-bottom: 1px solid black;
+	}
+}
+
+:local(.TransactionFilterRow) {
+	padding: 25px;
+	border-top: 1px solid black;
+	cursor: pointer;
+	&.active, &:hover {
+		background-color: #FAFBFC;
+	}
+	.title {
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 100;
+		color: #000000;
+		padding-left: 20px;
+		width: 90%;
+		vertical-align: bottom;
+		display: inline-block;
+	}
+	.value {
+		text-align: right;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 100;
+		color: #000000;
+		width: 10%;
+		display: inline-block;
+	}
+}
+

@@ -1,0 +1,38 @@
+0:00:00.360,0:00:03.430
+Your cohort's forum will be another[br]indispensable resource during your time
+
+0:00:03.430,0:00:04.790
+in this nanodegree.
+
+0:00:04.790,0:00:08.430
+There, you can ask and answer questions[br]and contribute to discussions.
+
+0:00:08.430,0:00:11.200
+The Udacity coach team, as well as[br]the other students in your cohort,
+
+0:00:11.200,0:00:13.390
+will be there to respond and help out.
+
+0:00:13.390,0:00:15.850
+Everyone, even the most[br]experienced of engineers,
+
+0:00:15.850,0:00:17.700
+gets stuck sometimes when[br]trying to solve problems.
+
+0:00:17.700,0:00:20.120
+So, please don't hesitate to[br]take advantage of the forum for
+
+0:00:20.120,0:00:22.380
+help, if you're ever in this position.
+
+0:00:22.380,0:00:24.860
+You can search to see if someone has[br]already asked a question related to
+
+0:00:24.860,0:00:27.790
+yours, or[br]you can make a new post if no one has.
+
+0:00:27.790,0:00:30.550
+Chances are someone else is wondering[br]about the same thing you are,
+
+0:00:30.550,0:00:31.150
+so don't be shy.

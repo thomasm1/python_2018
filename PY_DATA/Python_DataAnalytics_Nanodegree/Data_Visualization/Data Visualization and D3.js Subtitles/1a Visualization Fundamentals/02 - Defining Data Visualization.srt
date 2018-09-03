@@ -1,0 +1,168 @@
+1
+00:00:00,210 --> 00:00:02,240
+In trying to define data visualization,
+
+2
+00:00:02,240 --> 00:00:04,990
+I consulted some experts to learn more about the field.
+
+3
+00:00:04,990 --> 00:00:06,820
+Here's what they had to say.
+
+4
+00:00:06,820 --> 00:00:07,550
+Hi everyone.
+
+5
+00:00:07,550 --> 00:00:08,659
+I'm here with Scott Murray.
+
+6
+00:00:08,659 --> 00:00:10,590
+Scott, could you introduce yourself?
+
+7
+00:00:10,590 --> 00:00:11,300
+>> Sure.
+
+8
+00:00:11,300 --> 00:00:14,170
+I'm an assistant professor here at the University of San Francisco where I
+
+9
+00:00:14,170 --> 00:00:15,790
+teach in the design program.
+
+10
+00:00:15,790 --> 00:00:17,490
+I teach some of our intro classes, but
+
+11
+00:00:17,490 --> 00:00:21,360
+I also teach interaction design and information visualization.
+
+12
+00:00:21,360 --> 00:00:24,020
+And I'm author of the book Interactive Data Visualization for
+
+13
+00:00:24,020 --> 00:00:27,940
+the Web An Introduction to Designing with D3.
+
+14
+00:00:27,940 --> 00:00:29,970
+>> So, Scott, what is data visualization?
+
+15
+00:00:30,970 --> 00:00:34,270
+>> Well there's obviously a lot of different possible answers to that.
+
+16
+00:00:34,270 --> 00:00:37,811
+But I like to think about data visualization as mapping.
+
+17
+00:00:37,811 --> 00:00:41,290
+Not sort of making geographic maps, like traditionally how we think about maps.
+
+18
+00:00:41,290 --> 00:00:44,040
+But mapping values to visuals.
+
+19
+00:00:44,040 --> 00:00:48,300
+So teach a class on information visualization, it's,
+
+20
+00:00:48,300 --> 00:00:51,060
+it's sort of about information broadly, but when we're talking about data
+
+21
+00:00:51,060 --> 00:00:55,010
+visualization, I think of data as being kind of structured information.
+
+22
+00:00:55,010 --> 00:00:57,200
+So if you have a spreadsheet, you have rows and
+
+23
+00:00:57,200 --> 00:01:01,210
+columns, you have sort of information that's not just loosey goosey, but
+
+24
+00:01:01,210 --> 00:01:03,830
+it's organized in some sort of structured way.
+
+25
+00:01:03,830 --> 00:01:09,670
+So the visualization part is taking that data and figuring out ways to
+
+26
+00:01:09,670 --> 00:01:13,310
+translate that into visuals that are more readily understood.
+
+27
+00:01:13,310 --> 00:01:17,270
+So instead of reading these columns of numbers, we can look at you know,
+
+28
+00:01:17,270 --> 00:01:20,651
+these pictures of bars, or lines, or shapes, or whatever, different colors.
+
+29
+00:01:20,651 --> 00:01:21,980
+>> Okay, great.
+
+30
+00:01:21,980 --> 00:01:22,690
+Hi everyone.
+
+31
+00:01:22,690 --> 00:01:26,370
+I'm here with Cole Nussbaumer, who's a blogger with storytelling with data.
+
+32
+00:01:26,370 --> 00:01:29,008
+She's here to share some insights about data visualization, and
+
+33
+00:01:29,008 --> 00:01:31,330
+share some tips about how you can get started in the field.
+
+34
+00:01:32,710 --> 00:01:35,810
+So Cole, first tell us, what is data visualization?
+
+35
+00:01:35,810 --> 00:01:41,680
+>> So for me data visualization is about turning numbers into pictures and
+
+36
+00:01:41,680 --> 00:01:43,780
+into stories.
+
+37
+00:01:43,780 --> 00:01:49,080
+There's something about making data visual that allows us to explore and
+
+38
+00:01:49,080 --> 00:01:51,800
+understand the data in a different way.
+
+39
+00:01:51,800 --> 00:01:54,940
+Our visual system is actually really fast at processing information.
+
+40
+00:01:54,940 --> 00:01:58,877
+So good data visualization can lend itself to this sort of
+
+41
+00:01:58,877 --> 00:02:00,855
+ha moment of understanding.
+
+42
+00:02:00,855 --> 00:02:01,355
+>> Great.
+
