@@ -1,0 +1,126 @@
+Python 2.7.1 (r271:86832, Nov 27 2010, 17:19:03) [MSC v.1500 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+2+2
+4
+>>> 23.0//3
+7.0
+>>> 23.0/3
+7.666666666666667
+>>> 23/3
+7
+>>> 23//3
+7
+>>> 23/3
+7
+>>> 23.0/3.0
+7.666666666666667
+>>> 32.0//2.0
+16.0
+>>> 1/2*4*4
+0
+>>> (1/2)*4*4
+0
+>>> 1.0/2.0*4*4
+8.0
+>>> clear
+
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    clear
+NameError: name 'clear' is not defined
+>>> cls
+
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    cls
+NameError: name 'cls' is not defined
+>>> 
+KeyboardInterrupt
+>>> 
+>>> 
+
+>>> 
+
+
+>>> 
+>>> 
+>>> 
+
+>>> 
+
+
+>>> 
+
+>>> 
+
+>>> 
+
+
+>>> 
+
+>>> 
+
+
+>>> 
+
+>>> 
+
+>>> 
+
+
+>>> Clouds = 99
+>>> print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+
+Traceback (most recent call last):
+  File "<pyshell#29>", line 1, in <module>
+    print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+NameError: name 'myAge' is not defined
+>>> Clouds = 99
+>>> print('I have eaten')
+I have eaten
+>>> print('I have eaten " + 5)
+      
+SyntaxError: EOL while scanning string literal
+>>> printClouds = 99
+>>> 'rin' != 'dog'
+True
+>>> '3' != '3'
+False
+>>> (5>3)
+True
+>>> (5>3) & (3<5)
+True
+>>> if name == 'tom':
+
+	print('hi,tom')
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#41>", line 1, in <module>
+    if name == 'tom':
+NameError: name 'name' is not defined
+>>> 
+>>> 'rin' != 'dog'
+True
+>>> 
+>>> name = tom
+
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    name = tom
+NameError: name 'tom' is not defined
+>>> name = 'tom'
+>>> if name = 'tom' print('hi tom')
+SyntaxError: invalid syntax
+>>> if age < 12 print('yes')
+SyntaxError: invalid syntax
+>>> SyntaxError: invalid syntax
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> 
+>>> if name = 'tom'
+SyntaxError: invalid syntax
+>>> 
