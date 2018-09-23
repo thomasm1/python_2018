@@ -1,4 +1,4 @@
-###### VIRTUAL ENV ###########
+ ###### VIRTUAL ENV ###########
 ###### PY MATHEMATICS ########### 
 ##### PYTHON SERVERS ############### 
 ###### IOT TWYTHON TWITTER ###
@@ -32,6 +32,7 @@ $ virtualenv venv
 source venv/bin/activate
 pip install virtualenvwrapper
 $ export WORKON_HOME=~/Envs
+
 $ source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/
 mkvirtualenv venv
@@ -60,7 +61,7 @@ pipenv --three
 pipenv --two
 jupyter notebook
 pip install pendulum
-## IF USING PYTHON 3.5 ##
+## IF USING PYTHON 3.5 ## 
 conda install python=3.5
 
  ##### [in Anaconda prompt]
@@ -564,30 +565,6 @@ cryptography (1.7.1)
 drumhat (0.1.0)
 envirophat (1.0.0)
 ExplorerHAT (0.4.2)
-Flask (0.12.1) 
-gpiozero (1.4.1)  
-numpy (1.12.1)
-oauthlib (2.0.1) 
-pgzero (1.2) 
-picamera (1.13) 
-pigpio (1.38) 
-pip (9.0.1) 
-pycrypto (2.6.1)
-pygame (1.9.3) 
-pyperclip (1.6.2) 
-requests (2.12.4)
-requests-oauthlib (0.7.0) 
-scrollphat (0.0.7)
-scrollphathd (1.2.1)
-SecretStorage (2.3.1)
-sense-emu (1.0)
-sense-hat (2.2.0)
-setuptools (33.1.1)
-simplejson (3.10.0) 
-touchphat (0.0.1)
-twython (3.4.0) 
-urllib3 (1.19.1)
-Werkzeug (0.11.15) 
 
 # HARDWARE.  ######################### 
 SD cards bigger than 32GB using FAT32. However it is possible using third party tools. If you try to format a 64GB (or larger) USB flash drive or SD card under Windows you will have to choose between NTFS and exFAT.May 9, 2016
@@ -689,6 +666,7 @@ apt-get update:### Synchronizes the list of packages on your system to the list 
 apt-get upgrade: ###Upgrades all of the software packages you have installed.
 clear: ###Clears previously run commands and text from the terminal screen.
 date: ###Prints the current date.
+
 find / -name example.txt: ###Searches the whole system for the file example.txt and outputs a list of all directories that contain the file.
 nano example.txt: ###Opens the file example.txt in the Linux text editor Nano.
 poweroff: ###To shutdown immediately.
@@ -696,18 +674,21 @@ raspi-config: ###Opens the configuration settings menu.
 reboot: ###To reboot immediately.
 shutdown -h now: ###To shutdown immediately.
 shutdown -h 01:22: ###To shutdown at 1:22 AM.
+
 startx: ###Opens the GUI (Graphical User Interface).
 FILE AND DIRECTORY CsOMMANDS
 cat example.txt: ###Displays the contents of the file example.txt.
 cd /abc/xyz: ###Changes the current directory to the /abc/xyz directory.
 cp XXX: ###Copies the file or directory XXX and pastes it to a specified location; i.e. cp examplefile.txt /home/pi/office/ copies examplefile.txt in the current directory and pastes it into the /home/pi/ directory. If the file is not in the current directory, add the path of the file’s location (i.e. cp /home/pi/documents/examplefile.txt /home/pi/office/ copies the file from the documents directory to the office directory).
 ls -l: ###Lists files in the current directory, along with file size, date modified, and permissions.
+
 mkdir example_directory: ###Creates a new directory named example_directory inside the current directory.
 mv examplefile.txt /home/pi/office/ ###  moves examplefile.txt in the current directory to the /home/pi/office directory. If the file is not in the current directory, add the path of the file’s location (i.e. cp /home/pi/documents/examplefile.txt /home/pi/office/ moves the file from the documents directory to the office directory). This command can also be used to rename files (but only within the same directory). For example, mv examplefile.txt newfile.txt renames examplefile.txt to newfile.txt, and keeps it in the same directory.
 rm example.txt: ###Deletes the file example.txt.
 rmdir example_directory: ###Deletes the directory example_directory (only if it is empty).
 scp user@10.0.0.32:/some/path/file.txt: ###Copies a file over SSH. Can be used to download a file from a PC to the Raspberry Pi. user@10.0.0.32 is the username and local IP address of the PC, and /some/path/file.txt is the path and file name of the file on the PC.
 touch example.txt: ###Creates a new, empty file named example.txt in the current directory.
+
 NETWORKING AND INTERNET COMMANDS
 ifconfig: ###To check the status of the wireless connection you are using  (to see if wlan0 has acquired an IP address).
 iwconfig: ###To check which network the wireless adapter is using.
@@ -716,6 +697,7 @@ iwlist wlan0 scan | grep ESSID: ###Use grep along with the name of a field to li
 nmap: ###Scans your network and lists connected devices, port number, protocol, state (open or closed) operating system, MAC addresses, and other information.
 ping: ###Tests connectivity between two devices connected on a network. For example, ping 10.0.0.32 will send a packet to the device at IP 10.0.0.32 and wait for a response. It also works with website addresses.
 wget http://www.website.com/example.txt: ###Downloads the file example.txt from the web and saves it to the current directory.
+
 SYSTEM INFORMATION COMMANDS
 cat /proc/meminfo: ###Shows details about your memory.
 cat /proc/partitions: ###Shows the size and number of partitions on your SD card or hard drive.
@@ -724,6 +706,7 @@ df -h: ###Shows information about the available disk space.
 df /: ###Shows how much free disk space is available.
 dpkg – –get–selections | grep XXX: ###Shows all of the installed packages that are related to XXX.
 dpkg – –get–selections: ###Shows all of your installed packages.
+
 free: ###Shows how much free memory is available.
 hostname -I: ###Shows the IP address of your Raspberry Pi.
 lsusb: ###Lists USB hardware connected to your Raspberry Pi.
