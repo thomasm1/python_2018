@@ -32,12 +32,12 @@ sense.show_message(sense_data, text_colour=yellow, back_colour=blue, scroll_spee
         sense.clear(255,0,0) # RED
     else:
         sense.clear(0,255,0) # GREEN
-    '''
-     
+'''
+'''
 #______________GYROSCOPE______________get_gyroscope()
     #from sense_hat import SenseHat
 while True:
-    '''
+ 
     #sense = SenseHat()
     gyro_only = sense.get_gyroscope()
     print(" ")
@@ -47,16 +47,25 @@ while True:
 ##    print(sense.gyro)
 ##    print(sense.gyroscope)
 
-    #______________ACCELEROMETER______________get_accelerometer()
-    from sense_hat import SenseHat
-    sense = SenseHat()
+  
+#______________ACCELEROMETER______________get_accelerometer()
+#from sense_hat import SenseHat
+#sense = SenseHat
+while True: 
     accel_only = sense.get_accelerometer()
+    print(" ")
+    print(" ")
+    print(" ")
+    print(" ")
     print("ACCELEROMETER")
     print(" ")
-    print("p: {pitch}, r: {roll}, y: {yaw}".format(**accel_only)) 
-    print(sense.accel)
-    print(sense.accelerometer)
-'''
+    print("Pitch: {pitch}".format(**accel_only))
+    print("Roll: {roll}".format(**accel_only)) 
+    print("YAW: {yaw}".format(**accel_only))   
+    #print(sense.accel)
+    #print(sense.accelerometer)
+    sleep(.8)
+
     #______________MAGNETOMETER ORIENTATION______________get_orientation()
     from sense_hat import SenseHat
     sense = SenseHat()
@@ -67,14 +76,20 @@ while True:
     #print(sense.orientation)
     
     sleep(.9)
-    '''
+'''
+while True:
     #______________COMPASS______________get_compass()
     from sense_hat import SenseHat 
     sense = SenseHat()
     north = sense.get_compass()
     print(" ")
+    print(" ")
+    print(" ")
+    print(" ")
+    print(" ")
     print("Compass - bearing NORTH")
+    print(" ")
     print("North: %s" % north) 
     print(sense.compass)
     
-'''
+    sleep(.9)
