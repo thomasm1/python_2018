@@ -10,16 +10,20 @@ h=sense.get_humidity()
 
 print("Humidity :")
 print(h)
-  
-print("Red indicates > 45")
-print("Green indicates < 45 && > 10") 
+
+blue = (0,0,255)
+yellow = (255,255,0)
+green = (0,255,0)
+red = (255, 0, 0) 
+print("Red indicates > 40")
+print("Green indicates < 40 && > 10") 
 while True:
     h = sense.get_humidity() 
     print(h) 
+    if h < 10:
+        sense.clear(blue) #(0,0,255)
     if h > 40:
-        sense.clear(255,0,0)
-
+        sense.clear(red) #(255, 0, 0)
     else:
-        sense.clear(0,255,0)
-        
+        sense.clear(green) #(0,255,0)        
     sleep(0.5)  
