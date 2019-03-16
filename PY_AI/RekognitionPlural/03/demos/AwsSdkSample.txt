@@ -1,0 +1,46 @@
+import com.amazonaws.services.rekognition.AmazonRekognition;
+import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
+import com.amazonaws.AmazonClientException;
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.rekognition.model.AmazonRekognitionException;
+import com.amazonaws.services.rekognition.model.DetectModerationLabelsRequest;
+import com.amazonaws.services.rekognition.model.DetectModerationLabelsResult;
+import com.amazonaws.services.rekognition.model.Image;
+import com.amazonaws.services.rekognition.model.ModerationLabel;
+import com.amazonaws.services.rekognition.model.S3Object;
+
+import java.util.List;
+
+public class AwsSdkSample {
+
+   public static void main(String[] args) throws Exception {
+      String image = "david-full-front.jpg";
+      String bucket = "rekog-test2";
+      AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.standard()
+            .withRegion(Regions.US_EAST_1)
+            .withCredentials(new ProfileCredentialsProvider()).build();
+
+        DetectModerationLabelsRequest request = new DetectModerationLabelsRequest()
+          .withImage(new Image().withS3Object(new S3Object().withName(image).withBucket(bucket)))
+          .withMinConfidence(60F);
+        try
+        {
+             DetectModerationLabelsResult result = rekognitionClient.detectModerationLabels(request);
+             List<ModerationLabel> labels = result.getModerationLabels();
+             System.out.println("Detected labels for " + image);
+             for (ModerationLabel label : labels)
+             {
+                System.out.println("Label: " + label.getName()
+                 + "\n Confidence: " + label.getConfidence().toString() + "%"
+                 + "\n Parent:" + label.getParentName());
+            }
+         }
+         catch (AmazonRekognitionException e)
+         {
+           e.printStackTrace();
+         }
+   }
+}
