@@ -34,3 +34,6 @@ Single thread:   14.4 seconds
        8 Pool:   1.4 seconds
       13 Pool:   1.3 seconds
 """
+############################# multiple args #######
+# results = pool.starmap(function, zip(list_a, list_b))
+# results = pool.starmap(function, zip(itertools.repeat(constant), list_a))
