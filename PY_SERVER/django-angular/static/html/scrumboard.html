@@ -1,0 +1,48 @@
+<div class="logout">
+    <button ng-click="logout()">Logout</button>
+</div>
+<div class="list" ng-repeat="list in data">
+    <h3>{{ list.name }}</h3>
+
+    <span class="show-filters">
+        <button ng-click="showFilters=!showFilters">
+            {{ showFilters ? "Hide" : "Show" }} filters
+        </button>
+    </span>
+
+    <div class="list-sort"
+         ng-show="showFilters">
+        <hr>
+        <table>
+            <tr>
+                <td><label>Sort:</label></td>
+                <td>
+                    <select ng-model="sortBy">
+                        <option value="title">Title</option>
+                        <option value="story_points">Story Points</option>
+                        <option value="business_value">Business Value</option>
+                    </select>
+
+
+                    <input type="checkbox" ng-model="reverse">
+                    <label>Reverse</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Filter: </label></td>
+                <td class="flex"><input type="text" ng-Model="filterBy"/></td>
+            </tr>
+        </table>
+        <hr>
+    </div>
+    <ul>
+        <li ng-repeat="card in list.cards | filter:filterBy | orderBy:sortBy:reverse">
+            <scrumboard-card></scrumboard-card>
+        </li>
+    </ul>
+    <div class="flex">
+        <input type="text" ng-model="new_title"/>
+        <button ng-click="add(list, new_title)">+</button>
+    </div>
+</div>
