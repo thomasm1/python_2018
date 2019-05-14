@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+  emoji-engine:
+    build: ./emoji-engine
+    #command: python app.py
+    volumes:
+      - "./emoji-engine:/app"
+    environment:
+        FLASK_APP: 'app.py'
+        FLASK_DEBUG: 1
+    ports:
+      - "5002:5000"
+    networks:
+      - front-tier
+      - back-tier
+
+  starts-with:
+    build: ./starts-with
+    command: gunicorn --reload -c gunicorn.conf app:app
+    volumes:
+      - "./starts-with:/app"
+    ports:
+      - "5001:8000"
+    networks:
+      - back-tier
+
+  photo-hub:
+    build: ./photo-hub
+    command: gunicorn --reload -c gunicorn.conf app:app
+    volumes:
+      - "./photo-hub:/app"
+    ports:
+      - "5003:8000"
+    networks:
+      - back-tier
+  redis:
+    image: 'redis:3.2-alpine'
+    ports: ["6379"]
+    networks:
+      - back-tier
+
+volumes:
+  db-data:
+
+networks:
+  front-tier:
+  back-tier:
