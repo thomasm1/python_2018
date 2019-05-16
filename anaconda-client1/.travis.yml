@@ -1,0 +1,72 @@
+# https://travis-ci.org/Anaconda-Platform/anaconda-client
+
+language: python
+sudo: false
+branches:
+  only:
+    - 1.6.x
+    - 1.7.x
+    - 1.8.x
+    - master
+
+env:
+  global:
+    - CONDA_TEST_DEPENDENCIES="anaconda-project flake8 mock pillow pytest pytest-cov"
+    - PIP_TEST_DEPENDENCIES="codecov freezegun"
+
+matrix:
+  include:
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION=2.7
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION=3.7
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION=3.6
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION=3.5
+
+cache:
+  directories:
+    - $HOME/condacache/pkgs
+    - $HOME/.cache/pip
+
+install:
+  # Install latest miniconda
+  - if [[ "$PYTHON_VERSION" == "2.7" ]]; then
+      MINICONDA_PYVERSION=2;
+    else
+      MINICONDA_PYVERSION=3;
+    fi;
+    echo "Fetching Python $MINICONDA_PYVERSION miniconda";
+    wget https://repo.anaconda.com/miniconda/Miniconda$MINICONDA_PYVERSION-latest-MacOSX-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p "$HOME"/miniconda
+  - source "$HOME"/miniconda/etc/profile.d/conda.sh
+  - conda activate base
+
+  # Configure conda and update it
+  - conda config --set always_yes yes --set auto_update_conda false
+  - conda config --add pkgs_dirs ~/condacache/pkgs
+  - conda update -n root conda -q --no-pin
+
+  # Install dependencies. This include test and lint dependencies
+  - conda create -n test python=$PYTHON_VERSION
+  - conda install -n test --file requirements.txt -q --no-pin
+  - conda install -n test $CONDA_TEST_DEPENDENCIES -q --no-pin
+  - conda activate test
+  - pip install --upgrade pip
+  - pip install $PIP_TEST_DEPENDENCIES
+
+  # Install this package
+  - python setup.py develop
+
+script:
+  - conda info --json
+  # - flake8 binstar_client
+  - pytest binstar_client --cov=binstar_client
+
+after_success:
+  - codecov
