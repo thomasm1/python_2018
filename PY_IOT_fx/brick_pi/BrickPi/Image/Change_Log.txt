@@ -1,0 +1,45 @@
+Changes to BrickPi Image
+
+2014.06.05
+==========
++ Performed sudo update / sudo upgrade for latest additions.
++ Uninstalled and reinstalled BrickPi.py.  Improvements on Ultrasonic and Touch issues.
++ Installed entirely new Scratch Python script with updates to BrickPiscratch.py
++ git pull origin'ed:
+	- BrickPi_Scratch
+	- BrickPi_Python
+	- GrovePi
+	- Arduberry
+	- BrickPi_C
+	- BrickPi
++ Added shorcut start for Scratch to desktop
++ Added root terminal to desktop
++ Removed leftover wifi settings
++ Removed warning at VNC/Desktop startup LXPolKit Authentication Agent disabled.
++ Updated "Version" file on desktop
+
+MD5 Hash: 25485dd0552e4c0050e5a8f87d73dd1b
+
+2014.06.13
+==========
++ Removed Wolfram Alpha to get some extra space.
++ Resized image to make sure it fits on a 4GB SD Card.
+
+2014.07.29
+==========
++ sudo update / upgrade
++ sudo apt-get clean
+- Removed Adafruit IDE
++ Updated all repositories:  Arduberry, BrickPi, GrovePi, BrickPi_Python, BrickPi_C, BrickPi_Scratch
++ Added GoPiGo Repository
++ Installed GoPiGo Python
++ Installed GOPiGo Scratch
++ Installed Desktop Shortcut for Scratch
++ Update WiringPi
++ Updated Version on Desktop
++ Enabled Arduino Serial in Arduino IDE  (crontab ln -sf /dev/ttyAMA0 /dev/ttyS0)
++ Camera Streaming for GoPiGo	(start 213 mb, end at 82 mb free.)
++ sudo apt-get autoremove libfltk1.3
++ PS3 Controller Installation
++ Cloned Raspbian_for_robots and installed scripts for updates.
++ Remove WIFI Login credentials to Dexter Industries Lab
