@@ -1,1 +1,0 @@
-mvn archetype:generate -DarchetypeGroupId=com.amazonaws -DarchetypeArtifactId=aws-java-sdk-archetype -DgroupId=com.rekog.app -DartifactId=rekog-app -Dversion=0.1
