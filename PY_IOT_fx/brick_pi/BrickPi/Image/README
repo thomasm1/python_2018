@@ -1,0 +1,22 @@
+BrickPi Image
+Dexter Industries
+
+____________________________________________________________________________________________________
+
+Download the latest version of the image here:  http://sourceforge.net/projects/dexterindustriesraspbianflavor/
+
+This is our own custom version image for the BrickPi.  It's a modified Raspbian image with a few changes:
+
+This version is setup to:
+	- Boot to desktop.
+	- Accept a US keyboard (USA!)
+	- SSH Enabled with default login (pi, raspberry)
+	- VNC Login on Port 1, password raspberr
+	- Auto connect for wlan 
+	- Automatically connect over ethernet or wifi to the ip address "raspberrypi.local"
+	
+Most importantly to note, for the Raspberry Pi to communicate with the BrickPi, the following changes have been made to Wheezy:
+	- A modified version of Wiring Pi is installed.
+	- The UART clock speed is set to init_uart_clock=32000000
+	- Serial and I2C is enabled.
+
