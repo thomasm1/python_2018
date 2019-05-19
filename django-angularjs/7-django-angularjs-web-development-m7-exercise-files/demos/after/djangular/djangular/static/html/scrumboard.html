@@ -1,0 +1,30 @@
+<div ng-cloak>
+    <div class="logout">
+        <button ng-click="logout()">Logout</button>
+    </div>
+    <h3 id="project-name">Project: {{ project.name }}</h3>
+    <div class="list" ng-repeat="list in project.lists">
+        <h3>{{ list.name }}</h3>
+        <div class="list-sort" ng-init="sortBy='story_points'; reverse=true">
+            <label>Sort by: </label>
+            <select ng-model="sortBy">
+                <option value="title">Title</option>
+                <option value="story_points">Story Points</option>
+                <option value="business_value">Business Value</option>
+            </select>
+            <input type="checkbox" ng-model="reverse">
+            <label>Reverse</label>
+            <hr>
+        </div>
+        <ul>
+            <li ng-repeat="card in list.cards | orderBy:sortBy:reverse">
+                <scrumboard-card></scrumboard-card>
+            </li>
+        </ul>
+        <div class="flex">
+            <input type="text" ng-model="new_title"/>
+            <button ng-click="add(list, new_title)">+</button>
+        </div>
+    </div>
+</div>
+
