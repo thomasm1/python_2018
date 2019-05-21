@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html lang="en">
+{%  block page_head %}
+<head>
+<title>Django-React-Webpack</title>
+<meta charset="utf-8">
+</head>
+{% endblock %}
+<body style='margin:0'>
+{% block body %}
+<div id="react-app"></div>
+{% csrf_token %}
+{% endblock %}
+</body>
+{% block javascript %}
+{% render_bundle 'main' %}
+{% endblock %}
+</html>
