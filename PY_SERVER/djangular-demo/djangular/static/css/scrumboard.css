@@ -1,0 +1,74 @@
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.list {
+    width: 20%;
+    float: left;
+    border: 1px solid grey;
+    padding: 7px;
+    margin: 7px;
+    background-color: #2A9FBC;
+}
+
+.list h3 {
+    display: inline;
+    padding-left: 7px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card {
+    cursor: pointer;
+    background-color: #404040;
+    padding: 7px;
+    margin: 7px 0px;
+    color: white;
+}
+
+.card h4 {
+    margin: 0px;
+}
+
+.description {
+    color: lightgray;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex input {
+  flex-grow: 2;
+}
+
+.flex button {
+  flex-basis: auto;
+}
+
+.card button,
+.card input,
+.card textarea {
+    color: #404040;
+    margin: 2px 0px;
+}
+
+.card textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.logout,
+.show-filters {
+    float: right;
+}
+
+.list-sort {
+    color: white;
+    margin-left: 7px;
+}
