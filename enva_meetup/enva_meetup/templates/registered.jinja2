@@ -1,0 +1,11 @@
+{%  extends "base.jinja2" %}
+{% block title %} Home {{ input }} {% endblock %}
+{%  block body %} 
+<div class="container"> 
+<h3>Members</h3>
+<br /> 
+{% for member in members %}
+<li>{{ member }}</li>
+{% endfor %}</div>
+
+{% endblock %}
