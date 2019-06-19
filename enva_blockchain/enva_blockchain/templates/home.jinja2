@@ -1,0 +1,15 @@
+ {%  extends "base.jinja2" %}
+ {% block title %} Home {{ input }} {% endblock %}
+ {%  block body %} 
+<div class="container"> 
+<h3>Home</h3>
+<br />
+
+<br />
+<a href="/query?a=test&b=123">query</a> 
+<br />
+Name : {{ input }}
+Message:  {{ message }} 
+</div>
+
+{% endblock %}
