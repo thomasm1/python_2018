@@ -1,5 +1,5 @@
 #v1
-  def get_max_profit(coin_prices):
+  def get_max_profit1(coin_prices):
     max_profit = 0
 
     # Go through every time
@@ -25,27 +25,27 @@
     return max_profit
 
 #2
-  def get_max_profit(coin_prices):
-    max_profit = 0
+#   def get_max_profit2(coin_prices):
+#     max_profit = 0
 
-    # Go through every price (with its index as the time)
-    for earlier_time, earlier_price in enumerate(coin_prices):
+#     # Go through every price (with its index as the time)
+#     for earlier_time, earlier_price in enumerate(coin_prices):
 
-        # And go through all the LATER prices
-        for later_time in range(earlier_time + 1, len(coin_prices)):
-            later_price = coin_prices[later_time]
+#         # And go through all the LATER prices
+#         for later_time in range(earlier_time + 1, len(coin_prices)):
+#             later_price = coin_prices[later_time]
 
-            # See what  profit would be if bought at the
-            # earlier price and sold at the later price
-            potential_profit = later_price - earlier_price
+#             # See what  profit would be if bought at the
+#             # earlier price and sold at the later price
+#             potential_profit = later_price - earlier_price
 
-            # Update max_profit if can do better
-            max_profit = max(max_profit, potential_profit)
+#             # Update max_profit if can do better
+#             max_profit = max(max_profit, potential_profit)
 
-    return max_profit
+#     return max_profit
 
 #v3
-  def get_max_profit(coin_prices):
+  def get_max_profit3(coin_prices):
     min_price  = coin_prices[0]
     max_profit = 0
 
@@ -63,7 +63,7 @@
     return max_profit
 
 #v4 --best to reflect negative profits!
-def get_max_profit(coin_prices):
+def get_max_profit4(coin_prices):
     if len(coin_prices) < 2:
         raise ValueError('Getting a profit requires at least 2 prices')
 

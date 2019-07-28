@@ -1,4 +1,4 @@
-def get_max_profit(coin_prices):
+def get_max_profit4(coin_prices):
 
     # Calculate the max profit
      
