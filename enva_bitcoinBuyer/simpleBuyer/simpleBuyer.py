@@ -1,25 +1,10 @@
 def get_max_profit(coin_prices):
 
     # Calculate the max profit
-    
-
+     
     return 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 # Tests
