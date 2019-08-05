@@ -1,0 +1,76 @@
+ 
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ArmchairBitcoinist</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" > 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" ></script> 
+
+    <style>
+    body {
+        padding:20px 20px;
+        background-color:aliceblue; 
+        color:#0c4a7f;
+    }
+    header {
+        background-color:rgba(124,188,243,.15);
+        color:#0c4a7f;
+        border-radius:8%;
+        padding:10px;
+        text-transform:uppercase;
+
+    }
+     .subheader {
+        color:#337ab7;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        text-align:center;
+    }
+    .container {
+       /* border:1px solid rgba(124,188,243,.4); */
+       border: 1px solid brown;
+        padding:15px;
+        border-radius:8%;
+        width:90%;
+        height:600px;
+
+    }
+    .navigation {  
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    padding:10px;
+    font-size:1.8rem;
+    text-transform:uppercase;
+    }  
+    a.navi {
+        color:#0c4a7f;
+    }
+    a.login {
+        font-size:1.1rem;
+        float:right;
+        padding-right:10px;
+    }
+   
+    </style>
+</head>
+<body >  
+<header> 
+<a class="login" href="/register">Login | Register</a>
+<h2>The Armchair Bitcoinist</h2>
+<h3 class="subheader"><em>Bitcoin Research and Analysis Console</em></h3>
+</header>
+
+<div class="navigation"> 
+<a class="navi" href="/home"> Home</a>&nbsp; | &nbsp;
+<a class="navi" href="/home"> Console</a>&nbsp; | &nbsp;
+<a class="navi" href="/home/messages">Bitcoin News</a>&nbsp; | &nbsp; 
+<a class="navi" href="/home/analytics">Analytics</a>&nbsp; | &nbsp; 
+</div><hr>
+{%  block body %}
+{%  endblock %}   
+</body>
+</html>
