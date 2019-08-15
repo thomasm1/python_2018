@@ -3,7 +3,10 @@ from . import views
 #from django.conf.urls import url, include
 
 urlpatterns = [ 
-    path('', views.index, name='index') 
+    path('', views.index, name='index'),
+    #path('details/(int<id>)', views.details, name='details')
+    #path(r'^details/(?P<id>\d+)/$', views.details, name='details')
+    path('details/id', views.details, name="details")
 ]
 
 
