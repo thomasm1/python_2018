@@ -5,4 +5,6 @@ from django.http import HttpResponse
 
 def index(request):
   #return HttpResponse('Index this ...')
-  return render(request, 'posts/index.html')
+  return render(request, 'posts/index.html', { 
+      'title': 'Latest Posts'
+  })
