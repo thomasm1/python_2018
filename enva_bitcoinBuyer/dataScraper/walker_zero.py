@@ -1,5 +1,5 @@
 import random
-
+ 
 def walker_one(n):
     x = 0
     y = 0
