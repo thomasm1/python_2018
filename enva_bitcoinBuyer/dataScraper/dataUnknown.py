@@ -1,11 +1,15 @@
 # Bitcoin_Data_Scraper
 # Unknown Data Types/Structures
+
 import numpy as np
 
-# if contents of the initial array may not known,  
+# 1. 
+# if contents of the initial array not known,  
 # initialize to use it later. 
+print('1. if contents of the initial array not known initialize to use it later')
 
-# list or a tuple array type
+# list or tuple array type
+print('list or tuple array type')
 np_array1 = np.array([[ 0,  1,  2,  3,  4],
                      [ 5,  6,  7,  8,  9],
                      [10, 11, 12, 13, 14]])
@@ -35,7 +39,7 @@ print()
 
 # 1D array of numbers from 10 to 30 in increments of 5
 print('1D array of numbers from 10 to 30 in increments of 5')
-i= np.arange( 10, 30, 5 )
+i = np.arange( 10, 30, 5 )
 print(i)
 print()
 
@@ -49,5 +53,33 @@ print()
 print('1D array of 9 numbers equally spaced from 0 to 2')
 l = np.linspace( 0, 2, 9 ) 
 print(l)
+print()
+
+# 2. 
+# Get Axes, dimensions, total number of elems ### 
+print('2. Get Axes, dimensions, total number of elems')
+
+# Get # of axes (dimensions)
+print('Get num of axes (dimensions)')
+ndim = np_array1.ndim
+print(ndim)
+print()
+
+# Gets the dimensions of the array
+print('Gets the dimensions of the array')
+shape = np_array1.shape
+print(shape)
+print() 
+
+# (product --i.e., total number, of all elements # in np_array.shape)
+print('product --i.e., total number, of all elements # in np_array.shape')
+size = np_array1.size
+print(size)
+print()
+
+# Describe the type of the elements in the array
+print('Describe the type of the elements in the array')
+dtype = np_array1.dtype
+print(dtype)
 print()
 
