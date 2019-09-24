@@ -1,5 +1,6 @@
 from numpy import matrix
 import numpy as np 
+# https://docs.scipy.org/doc/numpy/reference/index.html
 
 aa = matrix([[2,3],[2,1]])
 bb = matrix([[3,1],[1,1]])
@@ -12,12 +13,15 @@ print('b:\n{}'.format(bb))
 #  2 arrays a and b, and subtract b from a:
 # can NOT do such an operation with arrays of differnt sizes, 
 # you'll get an error
+print('2 arrays a and b, and subtract b from a:')
 a = np.array( [20,30,40,50] )
 b = np.array( [0, 1, 2, 3] )
 c = a - b
 c = [20, 29, 38, 47]
 print(c)
 print()
+
+print('You can also perform scalar operations elementwise on the entire array')
 # You can also perform scalar operations elementwise on the entire array
 b**2
 b = [0, 1, 4, 9]
@@ -60,6 +64,7 @@ np.sqrt(b) # [ 0.0 ,  1.0, 1.41421356]
 np.floor(np.exp(b)) # [ 1.0, 2.0, 7.0 ]
 np.round(np.exp(b)) # [ 1.0, 3.0, 7.0 ]
 
+print('arrays indexed, sliced and iterated')
 #   arrays indexed, sliced and iterated  
 a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 a[2] # 2
@@ -69,6 +74,8 @@ a[:8] # [0, 1, 2, 3, 4, 5, 6, 7]
 a[2:] # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(a)
 print()
+
+print('multi-dimensional arrays')
 #   multi-dimensional arrays 
 b = [[ 0,  1,  2,  3],
      [10, 11, 12, 13],
