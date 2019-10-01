@@ -9,7 +9,7 @@ verify_ssl = true
 tensorflow = "==2.0.0-rc1"
 matplotlib = "*"
 pandas = "*"
-numpy = "*"
+numpy = "==1.16.1"
 
 [requires]
 python_version = "3.7"
