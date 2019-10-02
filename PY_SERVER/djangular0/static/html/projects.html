@@ -1,0 +1,10 @@
+<div>
+    <h3>Projects for user {{ vm.user.username }}</h3>
+    <ul>
+        <li ng-repeat="project in projects">
+            <a href="#/project/{{project.id}}">{{ project.name }}</a>
+        </li>
+    </ul>
+
+    <div ng-show="!projects.length">User has no projects.</div>
+</div>
