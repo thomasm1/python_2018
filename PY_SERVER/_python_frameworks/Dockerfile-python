@@ -1,0 +1,6 @@
+FROM example-base:latest
+RUN pip install -r pure_python/requirements.txt;
+WORKDIR pure_python/
+EXPOSE 8000
+CMD python server.py
+
