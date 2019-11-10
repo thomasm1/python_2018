@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, redirect
 app = Flask(__name__)
 
-currencies = [{'name': 'LiteCoin', 'symbol':'LTC'}, {'name': 'Bitcoin', 'symbol':'BTC'}, {'name': 'Ethereum', 'symbol':'ETH'}]
+currencies = [{'id': 1, 'name': 'LiteCoin', 'symbol':'LTC'}, {'id': 2, 'name': 'Bitcoin', 'symbol':'BTC'}, {'id': 3, 'name': 'Ethereum', 'symbol':'ETH'}]
 
 @app.route('/currency', methods=['GET'])
 def returnAll():

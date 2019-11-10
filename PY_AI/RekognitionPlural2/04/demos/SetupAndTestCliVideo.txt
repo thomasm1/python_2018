@@ -1,0 +1,62 @@
+Steps for setting up EC2/Cloud9 for Rekognition
+Create a SNS topic for Rekognition will publish to this topic.
+Use SQS to create a queue.
+Subscribe the queue to the topic
+Use IAM to create a service role for Rekognition
+After the role is created use the following JSON to add an inline policy.
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sns:Publish"
+            ],
+            "Resource": "arn:aws:sns:us-east-1:YOUR-TOPIC-ARN-HERE"
+        }
+    ]
+}
+Use IAM to create a user. 
+Select access with programmatic keys.
+Download key file or save keys by copy and paste
+Add the follow rights:
+Full S3 access
+Full SNS access
+Full SQS access
+
+Once the user is created add the following inline policy
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "MySid",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::YOUR-IAM-ROLE"
+        }
+    ]
+}
+Open your Cloud9 and type this command into the integrated terminal.
+
+sudo aws configure --profile RekognitionUser
+
+At the prompts, enter your access key, secret key, region and JSON as your output preference
+
+
+Command Line Demo
+
+Start the anaylsis
+
+aws rekognition start-label-detection --video "S3Object={Bucket="YOUR_BUCKET",Name="YOUR-VIDEO.mp4"}" \
+--endpoint-url https://rekognition.us-east-1.amazonaws.com \
+--notification-channel "SNSTopicArn=YOUR_TOPIC,RoleArn=YOUR-ROLE" \
+--region us-east-1 \
+--profile default
+
+To retrieve the data
+
+aws rekognition get-label-detection  --job-id YOUR-JOB-ID \
+--endpoint-url https://rekognition.us-east-1.amazonaws.com \
+--region us-east-1 \
+--profile default
