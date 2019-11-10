@@ -18,7 +18,7 @@
     "gulp-print": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
-    "js-yaml": "^3.8.3",
+    "js-yaml": "^3.13.1",
     "through2": "^2.0.3"
   },
   "scripts": {
