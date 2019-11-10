@@ -1,0 +1,5 @@
+FROM example-base:latest
+RUN pip install -r chalice/requirements.txt;
+WORKDIR chalice/
+EXPOSE 8000
+CMD chalice local
