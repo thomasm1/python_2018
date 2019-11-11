@@ -1,0 +1,33 @@
+#Traffic Lights
+from sense_hat import SenseHat
+from time import sleep
+r = (255, 0, 0)
+g = (0, 255, 0)
+b = (0, 0, 255)
+w = (255, 255, 255)
+e = (0, 0, 0)
+p1 = [
+    e, e, e, e, e, e, e, e,
+    b, e, e, e, e, e, e, e,
+    e, b, e, e, b, e, b, e,
+    e, b, r, r, b, w, w, e,
+    e, r, r, r, w, g, w, w,
+    e, r, r, r, e, r, e, e,
+    e, e, e, e, e, e, e, e
+    ]
+p2 = [
+    e, e, e, e, e, e, e, e,
+    b, e, e, e, e, e, e, e,
+    e, b, e, e, b, e, b, e,
+    e, b, r, r, b, w, w, e,
+    e, r, r, r, w, g, w, w,
+    e, r, r, r, r, w, w, e,
+    e, e, r, e, r, e, e, e,
+    e, e, e, e, e, e, e, e
+    ]
+def walking():
+    for i in range(10):
+        sense.set_pixels(p1)
+        sleep(0.5)
+        sense.set_pixels(p2)
+        sleep(0.5)
