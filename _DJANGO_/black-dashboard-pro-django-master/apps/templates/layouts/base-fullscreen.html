@@ -1,0 +1,71 @@
+<!--
+ =========================================================
+* Black Dashboard PRO - v1.1.1
+=========================================================
+
+* Product Page: https://themes.getbootstrap.com/product/black-dashboard-pro-premium-bootstrap-4-admin/
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>
+    Django Black Dashboard PRO - {% block title %} {% endblock title %} | AppSeed
+  </title>
+  
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="/static/assets/css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/static/assets/demo/demo.css" rel="stylesheet" />
+
+  <!-- Specific Page CSS goes HERE  -->  
+  {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body class="{% block bodyclass %}{% endblock %}-page">
+
+  {% include 'includes/navigation-auth.html' %}  
+
+  <div class="wrapper wrapper-full-page ">
+    <div class="full-page {% block contentclass %}{% endblock %}-page">
+      <div class="content">
+        <div class="container">
+
+          {% block content %}{% endblock %}
+
+        </div>
+      </div>
+
+      {% include 'includes/footer-auth.html' %}
+
+    </div>
+  </div>
+
+  {% include 'includes/scripts-auth.html' %}  
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
+  
+</body>
+
+</html>

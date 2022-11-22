@@ -1,0 +1,20 @@
+{
+    "name": "material-dashboard-pro-django",
+    "mastertemplate": "boilerplate-code-django-dashboard",
+    "version": "1.0.1",
+    "description": "Template project - Django Boilerplate Code",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/app-generator/material-dashboard-pro-django"
+    },
+    "bugs": {
+        "url": "https://github.com/app-generator/ct-material-dashboard-pro-django/issues"
+    },
+    "author": "Creative-Tim / AppSeed.us",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

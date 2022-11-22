@@ -1,0 +1,20 @@
+{
+    "name": "black-dashboard-pro-django",
+    "mastertemplate": "boilerplate-code-django-dashboard",
+    "version": "1.0.3",
+    "description": "Template project - Django Boilerplate Code",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/creativetimofficial/black-dashboard-pro-django"
+    },
+    "bugs": {
+        "url": "https://github.com/creativetimofficial/ct-black-dashboard-pro-django/issues"
+    },
+    "author": "Creative-Tim / AppSeed.us",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

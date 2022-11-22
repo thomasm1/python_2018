@@ -1,0 +1,39 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Error 403 {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="page-header error-page header-filter" style="background-image: url('/static/assets/img/clint-mckoy.jpg')">
+    <!--   you can change the color of the filter page using: data-color="blue | green | orange | red | purple" -->
+    <div class="content-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="title">403</h1>
+          <h2>Access denied</h2>
+          <h4>
+            Please contact support or <a href="{% url 'login' %}">authenticate</a>.
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    {% include 'includes/footer-auth.html' %}
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    $(document).ready(function() {
+      md.checkFullPageBackgroundImage();
+    });
+  </script>
+
+{% endblock javascripts %}

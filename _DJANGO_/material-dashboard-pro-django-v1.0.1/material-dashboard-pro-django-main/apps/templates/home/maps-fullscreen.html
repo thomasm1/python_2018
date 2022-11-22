@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Maps FullScreen {% endblock title %}
+
+{% block content %}
+
+    <div id="map"></div>
+    
+{% endblock content %}
+
+{% block javascripts %}
+
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initGoogleMaps();
+    });
+  </script>
+  
+{% endblock javascripts %}
