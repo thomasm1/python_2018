@@ -267,28 +267,82 @@ plt.ylabel('loss')
 plt.title('Losss vs. No. of epochs');
 
 accuracies = [
-  0.6455,
-  0.7431,
-  0.7730,
-  0.7913,
-  0.8043,
-  0.8131,
- 0.8191,
-  0.8237,
-  0.8279,
-  0.8370,
-  0.8406,
- 0.8434,
-  0.8465,
-  0.8490,
-  0.8512,
- 0.8532,
-  0.8545,
- 0.8570,
- 0.8577
+0.6455,
+0.7431,
+0.7730,
+0.7913,
+0.8043,
+0.8131,
+0.8191,
+0.8237,
+0.8279,
+0.8370,
+0.8406,
+0.8434,
+0.8465,
+0.8490,
+0.8512,
+0.8532,
+0.8545,
+0.8570,
+0.8577
 ]
 plt.plot(accuracies, '-x')
 plt.xlabel('epoch')
 plt.ylabel('accuracies')
 plt.title('accuracies vs. No. of epochs');
 # 2.55
+
+#test dataset
+test_dataset = MNIST(root='data/', train=False, transform=transforms.ToTensor())
+
+def predict_image(img, model):
+    xb = img.unsqueeze(0)
+    yb = model(xb)
+    _, preds = torch.max(yb, dim=1)
+    return preds[0].item()
+
+img, label = test_dataset[1839]
+plt.imshow(img[0], cmap='gray')
+print('Label:', label, ', PREDICTED: ', predict_image(img, model))
+# label 2, predicted 8
+
+img.unsqueeze(0).shape
+
+"""img.unsqueeze adds another dimension at the beginning of the 1x28x28 tensor, making it a 1 x 1 x 28x28,  which teh model views as a batch containing a single image."""
+
+img, label = test_dataset[0]
+plt.imshow(img[0], cmap='gray')
+print('Label:', label, ', Predicted:', predict_image(img, model))
+# label 7, predicted 7
+
+img, label = test_dataset[10]
+plt.imshow(img[0], cmap='gray')
+print('Label:', label, ', Predicted:', predict_image(img, model))
+# label 0, predicted 0
+
+img, label = test_dataset[193]
+plt.imshow(img[0], cmap='gray')
+print('Label:', label, ', Predicted:', predict_image(img, model))
+# label 9, predicted 9
+
+test_loader = DataLoader(test_dataset, batch_size=200)
+result = evaluate(model, loss_fn, test_loader, metric=accuracy)
+test_loss, total, test_acc = result
+print('Loss: {:.4f}, Accuracy: {:.4f}'.format(test_loss, test_acc))
+
+torch.save(model.state_dict(), 'mnist-logistic.pth')
+model.state_dict()
+
+# to load model weights, instantiate a  new object of class MnistModel and use .load_state_dict method
+model2 = MnistModel()
+model2.load_state_dict(torch.load('mnist-logistic.pth'))
+model2.state_dict()
+
+#Sanity Check to ensure same loss & accuracy as first model.
+test_loss, total, test_acc = evaluate(model2, loss_fn, test_loader, metric=accuracy)
+print('Loss: {:.4f}, Accuracy: {:.4f}'.format(test_loss, test_acc))
+
+"""Saving weights and bias matrices to disk for later reuse and Avoid Training from Scratch!
+.state_dict method returns an OrderedDict containing all the weights & bieas matrices
+"""
