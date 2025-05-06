@@ -50,26 +50,24 @@ def load_transactions(file):
     df["Date"] = pd.to_datetime(df["Date"], format="%d %b %Y")
     return categorize_transactions(df)
   except Exception as e:
-    st.errror(f"Error processing file: {str(e)}") 
+    st.error(f"Error processing file: {str(e)}") 
     return None
 
 def add_keyword_to_category(category, keyword):
-  keyword = keyword.strip() 
+  if not isinstance(keyword, str):
+    return False
+    keyword = keyword.strip() 
   if keyword and keyword not in st.session_state.categories[category]:
     st.session_state.categories[category].append(keyword)
     save_categories()
     return True
 
-  return False
-  # if category not in st.session_state.categories:
-  #   st.session_state.categories[category] = []
-  # if keyword not in st.session_state.categories[category]:
-  #   st.session_state.categories[category].append(keyword)
+  return False 
 
 
 def main():
   st.title("TMM Financial Categorizor")
-  uploaded_file = st.file_uploader("Upload transactions CSV", type=["csv"])
+  uploaded_file = st.file_uploader("1. Upload your bank statement in CSV format; 2. Add Categories; 3. Update row categories; 4. Presto!  ", type=["csv"])
 
   if uploaded_file is not None:
     df = load_transactions(uploaded_file)
@@ -81,15 +79,14 @@ def main():
       tab1, tab2 = st.tabs(["EXPENSES(Debits)", "PYMENTS{Credits}"])
      
       with tab1:
-        new_category = st.text_input("New Category")
-        add_button = st.button("Add Category") 
+        new_category = st.text_input("Add Custom Categories Below:")
+        add_button = st.button("Add") 
         if add_button and new_category:
           if new_category not in st.session_state.categories:
             st.session_state.categories[new_category] = []
             save_categories()
             st.success(f"Added new category: {new_category}") 
             st.rerun() 
-    #   st.write(debits_df)   #  REMOVE THIS LINE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!          
         st.subheader("My Expenses")
         edited_df = st.data_editor(
             st.session_state.debits_df[["Date", "Details", "Amount", "Category"]],
@@ -111,8 +108,7 @@ def main():
           for idx, row in edited_df.iterrows():
             new_category = row["Category"]
             if new_category == st.session_state.debits_df.at[idx, "Category"]:
-              continue
-
+              continue 
 
             details = row["Details"]
             st.session_state.debits_df.at[idx, "Category"] = new_category
@@ -134,15 +130,15 @@ def main():
             category_totals,
             values="Amount",
             names="Category",
-            title="Expenses Categorized",
+            title="Expenses Categorized"
         ) 
         st.plotly_chart(fig, use_container_width=True)
               
       with tab2:
         st.subheader("Payments Summary")
         total_payments = credits_df["Amount"].sum()
-        st.write(credits_df)   #  REMOVE THIS LINE!!!!!!!!!!!!!!!! 
         st.metric("Total Payments", f"{total_payments:,.2f} AED")
+        st.write(credits_df)   
 
    
 main()
